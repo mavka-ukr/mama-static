@@ -534,28 +534,47 @@
   </button>
   <div class="XDocsPageContent">
     
-    <h1>НАЗВА</h1>
-<p><code>НАЗВА</code> <keyword>це</keyword> вказівка <subject>Машини Мавки</subject>, ОПИС.</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">ВИЗНАЧЕННЯ
+    <h1>СтворитиМодуль</h1>
+<p><code>СтворитиМодуль</code> <keyword>це</keyword> вказівка <subject>Машини Мавки</subject>, що створює обʼєкт модуля й кладе його в загальний накопичувач.</p>
+<pre><div class="XDocsCodeWrapper"><code class="hljs">[](позиція_назви, позиція_коду){} -&gt; [обʼєкт_модуля]{}
 </code></div></pre>
 <h2>Протокол</h2>
 <h3>Людина</h3>
 <ol>
-<li>...</li>
+<li>Попросити виконати вказівку <code>СтворитиМодуль</code> з вказаною назвою та кодом.</li>
 </ol>
 <h3>Машина</h3>
 <ol>
-<li>...</li>
+<li>Створити обʼєкт модуля з вказаною назвою виконавши вказаний код.</li>
 </ol>
 <h2>Псевдокод втілення</h2>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">...
+<pre><div class="XDocsCodeWrapper"><code class="hljs">ціль позиція_назви = прочитати_перший_аргумент_вказівки();
+ціль назва = отримати_назву_за_позицією(позиція_назви);
+ціль позиція_коду = прочитати_другий_аргумент_вказівки();
+ціль код = отримати_код_за_позицією(позиція_коду);
+ціль обʼєкт_модуля = створити_модуль(назва);
+виконати_код_модуля(обʼєкт_модуля, код);
+покласти_в_накопичувач(обʼєкт_модуля);
 </code></div></pre>
 <h2>Приклад</h2>
 <p><subject>Мавка</subject>:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">...
+<pre><div class="XDocsCodeWrapper"><code class="hljs"><span class="hljs-keyword">модуль</span> двигуни
+  <span class="hljs-keyword">структура</span> <span class="hljs-title class_">Р</span><span class="hljs-title class_">еактивнийДвигун</span>
+  <span class="hljs-keyword">кінець</span>
+  
+  <span class="hljs-keyword">структура</span> <span class="hljs-title class_">І</span><span class="hljs-title class_">оннийДвигун</span>
+  <span class="hljs-keyword">кінець</span>
+  
+  <span class="hljs-keyword">дати</span> <span class="hljs-title class_">Р</span><span class="hljs-title class_">еактивнийДвигун</span>
+  <span class="hljs-keyword">дати</span> <span class="hljs-title class_">І</span><span class="hljs-title class_">оннийДвигун</span>
+<span class="hljs-keyword">кінець</span>
 </code></div></pre>
 <p><subject>МаМа</subject>:</p>
-<pre><div class="XDocsCodeWrapper"><code class="hljs">...
+<pre><div class="XDocsCodeWrapper"><code class="hljs">[код_модуля_двигуни]
+...
+[/код_модуля_двигуни]
+
+СтворитиМодуль двигуни код_модуля_двигуни
 </code></div></pre>
 
     <div class="XDocsPageContentBcFw">
